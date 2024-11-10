@@ -62,6 +62,8 @@ h2 {
 }
 
 a {
+  color: var(--clr-neutral-000);
+
   &:hover {
     cursor: pointer;
   }
@@ -148,7 +150,9 @@ header > .page-container {
 main {
   /* border: 1px solid blue; */
   padding-inline: 3rem;
+  padding-bottom: 3rem;
 }
+
 main > .page-container {
   /* border: 1px solid green; */
   width: 100%;
@@ -194,6 +198,53 @@ main > .page-container {
 .card__link {
   display: flex;
   gap: 0.5rem;
+}
+
+/* FOOTER ------------------------------------------------------------------- */
+
+footer {
+  background-color: var(--clr-primary);
+  padding-inline: 3rem;
+  /* padding-bottom: 3rem; */
+  color: var(--clr-neutral-000);
+  .page-container {
+    width: 100%;
+    display: flex;
+    padding-block: 3rem;
+    gap: 1rem;
+  }
+  h2 {
+    margin: 0;
+  }
+  .footer__img {
+    width: min(100%, 500px);
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .contact__email,
+  .contact__phone {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: max-content;
+    p {
+      margin-block: 0.5rem;
+    }
+  }
+}
+
+.contact__icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  filter: invert();
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 /* MEDIA QUERIES ------------------------------------------------------------ */
@@ -315,6 +366,29 @@ main > .page-container {
     padding-inline: 1rem;
     h2 {
       text-align: center;
+    }
+  }
+  footer {
+    padding-inline: 0rem;
+    .page-container {
+      padding-block-start: 1.5rem;
+      padding-block-end: 0;
+      flex-direction: column;
+    }
+    .contacts__left-container {
+      padding-inline: 1rem;
+      padding-bottom: 1rem;
+    }
+    .footer__img {
+      width: 100%;
+      place-self: end;
+    }
+    .contact__icons {
+      justify-content: center;
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 }
