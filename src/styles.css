@@ -14,6 +14,9 @@
 
   /* SIZES */
   --img-width: 350px;
+
+  /* BOX SHADOWS */
+  --box-shadow-1: 3px 3px 10px rgb(0 0 0 / 0.25);
 }
 
 *,
@@ -102,20 +105,14 @@ header > .page-container {
   min-width: var(--img-width);
   max-width: var(--img-width);
   float: left;
+  box-shadow: var(--box-shadow-1);
 }
 
 .header__text {
-  /* border: 3px solid blue; */
   padding: 1rem;
   background-color: var(--clr-neutral-000);
-  /* text-align: pretty; */
-  /* text-transform: pretty; */
-  /* margin-top: 50%; */
-  /* margin-block: auto; */
-  /* text-wrap: pretty; */
-  /* text-wrap: stable; */
-
-  /* height: 100%; */
+  box-shadow: var(--box-shadow-1);
+  z-index: -1;
 }
 
 .header__icons {
@@ -232,6 +229,7 @@ header > .page-container {
     }
     .header__text {
       margin: 0;
+      box-shadow: none;
     }
     .header__icons {
       display: flex;
