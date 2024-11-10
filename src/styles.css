@@ -7,6 +7,13 @@
   /* FONT FAMILIES */
   --ff-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  /* FONT SIZES */
+  --fs-xlarge: 4rem;
+  --fs-large: 2rem;
+
+  /* SIZES */
+  --img-width: 350px;
 }
 
 *,
@@ -44,6 +51,13 @@ img {
   margin-inline: 3rem;
 }
 
+h1 {
+  /* color: var(--clr-neutral-000); */
+}
+h2 {
+  font-size: var(--fs-large);
+}
+
 /* HEADER ------------------------------------------------------------------- */
 
 header {
@@ -64,21 +78,26 @@ header > .page-container {
   /* margin: 0; */
   margin-block-end: 0;
   font-size: 3rem;
+  width: var(--img-width);
+  text-align: center;
   /* text-wrap: nowrap; */
 }
 
 .header__img {
-  min-width: 350px;
-  max-width: 350px;
+  min-width: var(--img-width);
+  max-width: var(--img-width);
   float: left;
 }
 
 .header__text {
   border: 3px solid blue;
   padding: 1rem;
-
+  /* text-align: pretty; */
+  /* text-transform: pretty; */
   /* margin-top: 50%; */
   /* margin-block: auto; */
+  /* text-wrap: pretty; */
+  /* text-wrap: stable; */
 
   /* height: 100%; */
 }
@@ -99,57 +118,35 @@ header > .page-container {
 
 /* MEDIA QUERIES ------------------------------------------------------------ */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   header > .page-container {
     /* grid-template-columns: 1fr 1fr; */
     /* display: flex; */
     display: block;
     .header__title {
-      /* grid-column: 2; */
-      /* text-align: center; */
-      /* color: var(--clr-neutral-900); */
-      /* position: initial; */
-      /* top: 0; */
-      /* position: initial; */
-      /* margin: initial; */
-      /* bottom: initial; */
-      /* position: absolute; */
-      /* top: 0; */
-      /* right: 0; */
-      /* transform: translateX(-50%); */
-      /* margin: 0; */
-      /* transform: scale(110%) translateX(calc(-5%)); */
       transform: scale(1.2);
       border: 3px solid red;
-      /* margin-right: 2.5rem; */
-      /* align-items: center; */
-      /* justify-content: center; */
       text-wrap: nowrap;
-      top: 0;
+      top: 1rem;
       margin: 0;
       height: max-content;
       min-width: calc(100% - 2.5rem - 350px);
-      /* justify-content: center; */
-      /* align-items: center; */
       text-align: center;
-      /* transform: translateX(-50%); */
-      /* left: 350px; */
       right: 2.5rem;
-      /* float: right; */
-      /* justify-self: flex-end; */
-      /* align-self: end; */
-      /* left: 50%; */
-      /* left: calc(350px + 50% - 2.5rem); */
-      /* transform: translateX(-100%); */
-      /* text-wrap: nowrap; */
     }
     .header__text {
-      margin-top: 2.5rem;
+      margin-top: 5rem;
       /* position: relative; */
+      /* h2 {
+        padding-block-start: 1rem;
+      } */
       margin-left: 2.5rem;
       margin-right: 2.5rem;
       h2 {
         text-align: center;
+      }
+      p {
+        /* margin-top: -1.5rem; */
       }
       /* margin-block: 0; */
       /* grid-column: 1 span 2; */
@@ -158,6 +155,7 @@ header > .page-container {
     }
     .header__img {
       margin-right: 1rem;
+      /* margin-bottom: 1.5rem; */
       /* margin-bottom: 0.5rem; */
       /* grid-row: 1; */
       /* position: absolute; */
@@ -170,5 +168,44 @@ header > .page-container {
       grid-column: 2 / span 2;
       grid-row: span 2;
     } */
+  }
+}
+
+@media (max-width: 600px) {
+  header > .page-container {
+    --img-height: 500px;
+    display: flex;
+    flex-direction: column;
+    .header__title {
+      /* bottom: 0; */
+      top: var(--img-height);
+      transform: translateY(-100%) scale(1);
+      left: 0;
+      text-align: left;
+      font-size: var(--fs-xlarge);
+      min-width: none;
+      width: 100%;
+      /* top: initial; */
+      text-wrap: wrap;
+      padding-inline: 1rem;
+    }
+    .header__img {
+      min-width: 100%;
+      margin: 0;
+      height: var(--img-height);
+      /* border: 3px solid green; */
+      text-wrap: wrap;
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    .header__text {
+      margin: 0;
+    }
+    .header__icons {
+      display: flex;
+      justify-self: center;
+    }
   }
 }
