@@ -61,6 +61,18 @@ h2 {
   font-size: var(--fs-large);
 }
 
+a {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.socials-icon {
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
 /* HEADER ------------------------------------------------------------------- */
 
 header {
@@ -76,7 +88,7 @@ header {
     width: 100%;
     height: 120%;
     background-color: var(--clr-primary);
-    z-index: -1;
+    z-index: -2;
     /* transform: skew(-80deg) scaleX(3); */
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
   }
@@ -106,25 +118,26 @@ header > .page-container {
   max-width: var(--img-width);
   float: left;
   box-shadow: var(--box-shadow-1);
+  z-index: 1;
 }
 
 .header__text {
   padding: 1rem;
   background-color: var(--clr-neutral-000);
   box-shadow: var(--box-shadow-1);
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .header__icons {
   /* background-color: gray; */
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   /* justify-self: end; */
   place-self: end;
   /* margin-right: 1rem; */
   /* align-self: end; */
   img {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 2rem;
   }
 }
@@ -230,6 +243,9 @@ header > .page-container {
     .header__text {
       margin: 0;
       box-shadow: none;
+      p {
+        margin-block-end: 2rem;
+      }
     }
     .header__icons {
       display: flex;
