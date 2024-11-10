@@ -111,6 +111,7 @@ header > .page-container {
   width: var(--img-width);
   text-align: center;
   /* text-wrap: nowrap; */
+  z-index: 3;
 }
 
 .header__img {
