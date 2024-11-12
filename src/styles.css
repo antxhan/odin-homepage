@@ -135,13 +135,19 @@ header > .page-container {
   /* background-color: gray; */
   display: flex;
   gap: 1rem;
-  /* justify-self: end; */
-  place-self: end;
+  /* border: 1px solid red; */
+  justify-content: flex-end;
+  /* float: right; */
+  /* align-self: flex-end; */
+  /* justify-self: flex-end; */
+  /* place-self: end; */
   /* margin-right: 1rem; */
   /* align-self: end; */
   img {
     /* border: 1px solid red; */
     width: 2rem;
+    /* justify-self: flex-end; */
+    /* align-self: flex-end; */
   }
 }
 
@@ -359,7 +365,7 @@ footer {
     }
     .header__icons {
       display: flex;
-      justify-self: center;
+      justify-content: center;
     }
   }
   main {
